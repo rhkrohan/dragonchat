@@ -1,15 +1,37 @@
-import React from "react";
-import { Text, StyleSheet } from "react-native";
+import React from 'react';
+import { Text, StyleSheet, View } from 'react-native';
 
 const HomeScreen = () => {
-  return <Text style={styles.text}>Helloo</Text>;
+	return (
+		<View style={{ flex: 1 }}>
+			<View style={chatSection.upWindow}>
+				<Text>Hello</Text>
+			</View>
+
+			<View style={chatSection.downWindow}>
+				<Text>Hello</Text>
+			</View>
+
+			<View style={chatSection.footerWindow}>
+				<Text>Hello</Text>
+			</View>
+		</View>
+	);
 };
 
-const styles = StyleSheet.create({
-  text: {
-    fontSize: 30,
-  },
+const chatSection = StyleSheet.create({
+	upWindow: {
+		backgroundColor: '#fcba03',
+		flex: 0.46,
+	},
+	downWindow: {
+		backgroundColor: '#020e5c',
+		flex: 0.46,
+	},
+	footerWindow: {
+		backgroundColor: 'black',
+		flex: 0.08,
+	},
 });
 
 export default HomeScreen;
-
