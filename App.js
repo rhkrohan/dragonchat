@@ -16,6 +16,12 @@ const navigator = createStackNavigator(
 			headerBackground: () => {
 				return <View style={styles.headerBackground}></View>;
 			},
+			headerTitleStyle: {
+				color: 'white', // Title color
+				fontSize: 20, // Title font size
+				fontWeight: 'bold', // Title font weight
+				textAlign: 'center', // Center align the title
+			},
 		},
 	},
 );
