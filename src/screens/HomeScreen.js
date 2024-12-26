@@ -2,7 +2,7 @@ import React from 'react';
 import { Text, StyleSheet, View, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-const HomeScreen = () => {
+const HomeScreen = ({ navigation }) => {
 	return (
 		<View style={{ flex: 1 }}>
 			<View style={chatSection.upWindow}>
@@ -16,9 +16,18 @@ const HomeScreen = () => {
 			<View style={chatSection.footerWindow}>
 				<TouchableOpacity style={chatSection.footerLeft}>
 					<Icon name="smart-display" size={30} color="white" />
+					onPress=
+					{() => {
+						navigation.navigate('Home');
+					}}
 				</TouchableOpacity>
 
-				<TouchableOpacity style={chatSection.footerRight}>
+				<TouchableOpacity
+					style={chatSection.footerRight}
+					onPress={() => {
+						navigation.navigate('Components');
+					}}
+				>
 					<Icon name="settings" size={30} color="white" />
 				</TouchableOpacity>
 			</View>
