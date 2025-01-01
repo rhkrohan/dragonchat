@@ -5,7 +5,9 @@ import Footer from './Components/ Footer';
 const SettingsScreen = ({ navigation }) => {
 	return (
 		<View style={styles.body}>
-			<View style={styles.mainArea}></View>
+			<View style={styles.mainArea}>
+				<View style={styles.circlePic} />
+			</View>
 
 			<Footer navigation={navigation} />
 		</View>
@@ -20,6 +22,13 @@ const styles = StyleSheet.create({
 	mainArea: {
 		flex: 0.92,
 		backgroundColor: 'yellow',
+	},
+	circlePic: {
+		borderRadius: 50,
+		marginVertical: 50,
+		alignSelf: 'center',
+		padding: 50,
+		backgroundColor: 'grey',
 	},
 });
 
