@@ -1,6 +1,6 @@
 import React from 'react';
-import { Text, StyleSheet, View, TouchableOpacity } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import { Text, StyleSheet, View } from 'react-native';
+import Footer from '../Components/ Footer';
 
 const HomeScreen = ({ navigation }) => {
 	return (
@@ -13,24 +13,7 @@ const HomeScreen = ({ navigation }) => {
 				<Text>Hello</Text>
 			</View>
 
-			<View style={chatSection.footerWindow}>
-				<TouchableOpacity style={chatSection.footerLeft}>
-					<Icon name="smart-display" size={30} color="white" />
-					onPress=
-					{() => {
-						navigation.navigate('Home');
-					}}
-				</TouchableOpacity>
-
-				<TouchableOpacity
-					style={chatSection.footerRight}
-					onPress={() => {
-						navigation.navigate('Components');
-					}}
-				>
-					<Icon name="settings" size={30} color="white" />
-				</TouchableOpacity>
-			</View>
+			<Footer navigation={navigation} />
 		</View>
 	);
 };
@@ -43,24 +26,6 @@ const chatSection = StyleSheet.create({
 	downWindow: {
 		backgroundColor: '#020e5c',
 		flex: 0.46,
-	},
-	footerWindow: {
-		backgroundColor: 'black',
-		flex: 0.08,
-		flexDirection: 'row',
-		justifyContent: 'center',
-		alignItems: 'center',
-		paddingBottom: 10,
-	},
-	footerLeft: {
-		flex: 0.5,
-		flexDirection: 'row',
-		justifyContent: 'center',
-	},
-	footerRight: {
-		flex: 0.5,
-		flexDirection: 'row',
-		justifyContent: 'center',
 	},
 });
 

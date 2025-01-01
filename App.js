@@ -2,12 +2,12 @@ import { StyleSheet, View } from 'react-native';
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import HomeScreen from './src/screens/HomeScreen';
-import ComponentsScreen from './src/screens/ComponentsScreen';
+import SettingsScreen from './src/SettingsScreen';
 
 const navigator = createStackNavigator(
 	{
 		Home: HomeScreen,
-		Components: ComponentsScreen,
+		Settings: SettingsScreen,
 	},
 	{
 		initialRouteName: 'Home',
@@ -22,6 +22,7 @@ const navigator = createStackNavigator(
 				fontWeight: 'bold', // Title font weight
 				textAlign: 'center', // Center align the title
 			},
+			headerTintColor: 'white',
 		},
 	},
 );
